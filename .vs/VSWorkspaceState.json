@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebAPI_ST",
+    "\\WebAPI_ST\\WebAPI_ST",
+    "\\WebAPI_ST\\WebAPI_ST\\Models"
   ],
+  "SelectedNode": "\\WebAPI_ST\\WebAPI_ST\\Models\\Brand.cs",
   "PreviewInSolutionExplorer": false
 }
