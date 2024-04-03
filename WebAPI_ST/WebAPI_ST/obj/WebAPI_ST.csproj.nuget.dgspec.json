@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj": {}
+    "E:\\Project\\Rest_API\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj": {}
   },
   "projects": {
-    "E:\\Project\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj": {
+    "E:\\Project\\Rest_API\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj",
+        "projectUniqueName": "E:\\Project\\Rest_API\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj",
         "projectName": "WebAPI_ST",
-        "projectPath": "E:\\Project\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj",
+        "projectPath": "E:\\Project\\Rest_API\\WebAPI_ST\\WebAPI_ST\\WebAPI_ST.csproj",
         "packagesPath": "C:\\Users\\anind\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\WebAPI_ST\\WebAPI_ST\\obj\\",
+        "outputPath": "E:\\Project\\Rest_API\\WebAPI_ST\\WebAPI_ST\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
