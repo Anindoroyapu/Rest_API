@@ -1,28 +1,75 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
-import navbarPhoto from "../../assets/desktop version.jpeg";
 
 function Navbar() {
   return (
-    <nav>
-      <div className="navbar-header">
-        <img src={navbarPhoto} />
-      </div>
+    <nav className=" ">
+      <div className="navbar-header">Photo</div>
       <div>
         <div className="container text-center">
-          <div className="row">
-            <div className="col ">
-              1 of 3<div className="col-8">2 of 3 (wider)</div>
-            </div>
-            <div className="col-8">2 of 3 (wider)</div>
-            <div className="col">3 of 3</div>
+          <div className="searchBar">
+            <form class="d-flex p-md-4" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
           <div className="row">
-            <div className="col">1 of 3</div>
-            <div className="col-5">2 of 3 (wider)</div>
-            <div className="col">3 of 3</div>
+            <div className="col ">
+              <div className="desktopMenu list-group">
+                <a className="list-group-item" href="/Home">
+                  Home
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Bike Price
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Compare
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Accessories
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Showrooms
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Brands
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Scooter
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Electric
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Upcoming
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Review
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Tips
+                </a>
+                <a className="list-group-item" href="/Home">
+                  Other
+                </a>
+              </div>
+            </div>
+            <div className="col-8">Body</div>
+            <div className="col">Body2</div>
+          </div>
+
+          <div className="row">
+            <div className="col">1 Box</div>
+            <div className="col-5">2 Box</div>
+            <div className="col">3 Box</div>
           </div>
         </div>
       </div>
