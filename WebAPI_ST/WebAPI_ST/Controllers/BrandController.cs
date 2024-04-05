@@ -45,6 +45,14 @@ namespace WebAPI_ST.Controllers
             return new JsonResult(brand);
         }
 
+        [HttpGet("Get/all")]
+        public IActionResult GetAll()
+        {
+            var result= _dbContext.Brands.ToList();
+
+            return new JsonResult(result);
+        }
+
 
         [HttpPost]
         public IActionResult Post(Brand brand)
@@ -53,6 +61,39 @@ namespace WebAPI_ST.Controllers
             _dbContext.SaveChanges();
 
             return CreatedAtAction(nameof(GetBrand), brand);
+        }
+
+
+        [HttpPut]
+        public IActionResult Update(Brand brand)
+        {
+            var existingBrand = _dbContext.Brands.Find(brand.ID);
+
+            if (existingBrand == null)
+            {
+                return new JsonResult(NotFound());
+            }
+            
+            _dbContext.SaveChanges();
+
+            return new JsonResult(Ok(existingBrand));
+        }
+
+
+        [HttpDelete("delete/{Id}")]
+        public IActionResult Delete(int ID)
+        {
+            var result = _dbContext.Brands.Find(ID);
+
+            if (result == null)
+            {
+                return new JsonResult(NotFound());
+
+            }
+            _dbContext.Brands.Remove(result);
+            _dbContext.SaveChanges();
+
+            return new JsonResult(NoContent());
         }
 
 
