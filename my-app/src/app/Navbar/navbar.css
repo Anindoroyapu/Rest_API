@@ -1,10 +1,10 @@
-* {
+.header {
   background-image: url(../../assets/bg-1.jpg);
   background-repeat: no-repeat;
+  backdrop-filter: blur(50%);
 }
 .navbar-header {
   height: 6rem;
-  border-bottom: 1px solid black;
   text-align: center;
   justify-content: center;
   align-items: center;
