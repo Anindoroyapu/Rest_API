@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import dPhoto from "../../assets/desktop_version.jpg";
@@ -6,8 +6,19 @@ import photo1 from "../../assets/111.jpg";
 import photo2 from "../../assets/222.jpg";
 import photo3 from "../../assets/333.jpg";
 import photo4 from "../../assets/444.jpg";
+import logo1 from "../../assets/hero.png";
+import logo2 from "../../assets/honda.png";
+import logo3 from "../../assets/suzuki.png";
+import logo4 from "../../assets/tvs.png";
+//import logo5 from "../../assets/yamaha.png";
+import iopt from "../Pages/iopt";
 
 function Navbar() {
+  const [collapsed, setCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setCollapsed(!collapsed);
+  };
   return (
     <nav className="header">
       <div className="navbar-header">
@@ -23,8 +34,14 @@ function Navbar() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-primary me-2" type="submit">
                 Search
+              </button>
+              <button class="btn btn-primary me-2" type=" ">
+                Login
+              </button>
+              <button class="btn btn-outline-primary me-2" type=" ">
+                SignUp
               </button>
             </form>
           </div>
@@ -100,18 +117,75 @@ function Navbar() {
                 <div>
                   <h1>Browse Bikes By</h1>
                 </div>
-                <button type="button" class="btn">
-                  Brand
-                </button>
-                <button type="button" class="btn">
-                  Budget
-                </button>
-                <button type="button" class="btn">
-                  Displacement
-                </button>
-                <button type="button" class="btn">
-                  Body Style
-                </button>
+                <div class="row border-bottom">
+                  <div class="col border-primary">
+                    <button type="button" class="btn" onClick={toggleCollapse}>
+                      {collapsed ? "Brand" : "Brand"}
+                    </button>
+                  </div>
+                  <div class="col border-primary">
+                    <button type="button" class="btn ">
+                      Budget
+                    </button>
+                  </div>
+                  <div class="col border-primary">
+                    <button type="button" class="btn ">
+                      Displacement
+                    </button>
+                  </div>
+                  <div class="col border-primary">
+                    <button type="button" class="btn ">
+                      Body Style
+                    </button>
+                  </div>
+                </div>
+
+                <div className="">
+                  {!collapsed && (
+                    <div>
+                      <div class="container d-inline-flex gap-5">
+                        <div class="row d-inline-flex gap-5">
+                          <div class="col">
+                            <a href="# ">
+                              <img
+                                src={logo1}
+                                alt=""
+                                style={{ width: "100px", height: "100px" }}
+                              />
+                            </a>
+                          </div>
+                          <div class="col">
+                            <a href="# ">
+                              <img
+                                src={logo2}
+                                alt=""
+                                style={{ width: "100px", height: "100px" }}
+                              />
+                            </a>
+                          </div>
+                          <div class="col">
+                            <a href="# ">
+                              <img
+                                src={logo3}
+                                alt=""
+                                style={{ width: "100px", height: "100px" }}
+                              />
+                            </a>
+                          </div>
+                          <div class="col">
+                            <a href="# ">
+                              <img
+                                src={logo4}
+                                alt=""
+                                style={{ width: "100px", height: "100px" }}
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             <div className="col">
@@ -123,15 +197,10 @@ function Navbar() {
               </div>
             </div>
           </div>
-
-          <div className="row">
-            <div className="col">1 Box</div>
-            <div className="col-5">2 Box</div>
-            <div className="col">3 Box</div>
-          </div>
         </div>
       </div>
     </nav>
   );
 }
+
 export default Navbar;
