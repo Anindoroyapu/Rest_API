@@ -10,14 +10,20 @@ import logo1 from "../../assets/hero.png";
 import logo2 from "../../assets/honda.png";
 import logo3 from "../../assets/suzuki.png";
 import logo4 from "../../assets/tvs.png";
-//import logo5 from "../../assets/yamaha.png";
-import iopt from "../Pages/iopt";
+import logo5 from "../../assets/yamaha.png";
 
 function Navbar() {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState({
+    collapse1: false,
+    collapse2: false,
+    collapse3: false,
+  });
 
-  const toggleCollapse = () => {
-    setCollapsed(!collapsed);
+  const toggleCollapse = (collapseKey) => {
+    setCollapsed((prevState) => ({
+      ...prevState,
+      [collapseKey]: !prevState[collapseKey],
+    }));
   };
   return (
     <nav className="header">
@@ -112,80 +118,222 @@ function Navbar() {
                 </a>
               </div>
             </div>
-            <div className="col-8 border">
+            <div className="col-8 border ">
               <div>
                 <div>
                   <h1>Browse Bikes By</h1>
                 </div>
-                <div class="row border-bottom">
+                <div class="row border-bottom font-weight-bold">
                   <div class="col border-primary">
-                    <button type="button" class="btn" onClick={toggleCollapse}>
-                      {collapsed ? "Brand" : "Brand"}
+                    <button
+                      type="button"
+                      class="btn"
+                      onClick={() => toggleCollapse("collapse1")}
+                    >
+                      {collapsed.collapse1 ? "Brand" : "Brand"}
                     </button>
-                  </div>
-                  <div class="col border-primary">
-                    <button type="button" class="btn ">
-                      Budget
-                    </button>
-                  </div>
-                  <div class="col border-primary">
-                    <button type="button" class="btn ">
-                      Displacement
-                    </button>
-                  </div>
-                  <div class="col border-primary">
-                    <button type="button" class="btn ">
-                      Body Style
-                    </button>
-                  </div>
-                </div>
 
-                <div className="">
-                  {!collapsed && (
-                    <div>
-                      <div class="container d-inline-flex gap-5">
-                        <div class="row d-inline-flex gap-5">
-                          <div class="col">
-                            <a href="# ">
-                              <img
-                                src={logo1}
-                                alt=""
-                                style={{ width: "100px", height: "100px" }}
-                              />
-                            </a>
-                          </div>
-                          <div class="col">
-                            <a href="# ">
-                              <img
-                                src={logo2}
-                                alt=""
-                                style={{ width: "100px", height: "100px" }}
-                              />
-                            </a>
-                          </div>
-                          <div class="col">
-                            <a href="# ">
-                              <img
-                                src={logo3}
-                                alt=""
-                                style={{ width: "100px", height: "100px" }}
-                              />
-                            </a>
-                          </div>
-                          <div class="col">
-                            <a href="# ">
-                              <img
-                                src={logo4}
-                                alt=""
-                                style={{ width: "100px", height: "100px" }}
-                              />
-                            </a>
+                    {!collapsed.collapse1 && (
+                      <div>
+                        <div class="container ">
+                          <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
+                            <div class="col">
+                              <a href="# ">
+                                <img
+                                  src={logo1}
+                                  alt=""
+                                  style={{ width: "100px", height: "100px" }}
+                                />
+                              </a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">
+                                <img
+                                  src={logo2}
+                                  alt=""
+                                  style={{ width: "100px", height: "100px" }}
+                                />
+                              </a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">
+                                <img
+                                  src={logo3}
+                                  alt=""
+                                  style={{ width: "100px", height: "100px" }}
+                                />
+                              </a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">
+                                <img
+                                  src={logo4}
+                                  alt=""
+                                  style={{ width: "120px", height: "120px" }}
+                                />
+                              </a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">
+                                <img
+                                  src={logo5}
+                                  alt=""
+                                  style={{ width: "100px", height: "100px" }}
+                                />
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
+                  <div class="col border-primary">
+                    <button
+                      type="button"
+                      class="btn"
+                      onClick={() => toggleCollapse("collapse2")}
+                    >
+                      {collapsed.collapse2 ? "Budget" : "Budget"}
+                    </button>
+
+                    {!collapsed.collapse2 && (
+                      <div>
+                        <div class="container ">
+                          <div class="row d-inline-flex gap-4 me-2 p-2">
+                            <div class="col">
+                              <a href="# ">Under 60000</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 1Lakh</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 1.5Lakh</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 2Lakh</a>
+                            </div>
+                          </div>
+                          <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
+                            <div class="col">
+                              <a href="# ">Under 2.5Lakh</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 3Lakh</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 4Lakh</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Other</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div class="col border-primary">
+                    <button
+                      type="button"
+                      class="btn"
+                      onClick={() => toggleCollapse("collapse3")}
+                    >
+                      {collapsed.collapse3 ? "Displacement" : "Displacement"}
+                    </button>
+                    {!collapsed.collapse3 && (
+                      <div>
+                        <div class="container ">
+                          <div class="row d-inline-flex gap-4 me-2 p-2">
+                            <div class="col">
+                              <a href="# ">Under 100cc</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 150cc</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 200cc</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 250cc</a>
+                            </div>
+                          </div>
+                          <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
+                            <div class="col">
+                              <a href="# ">Under 300cc</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 350cc</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Under 400cc</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Other</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div class="col border-primary">
+                    <button
+                      type="button"
+                      class="btn"
+                      onClick={() => toggleCollapse("collapse4")}
+                    >
+                      {collapsed.collapse4 ? "Body Style" : "Body Style"}
+                    </button>
+                    {!collapsed.collapse4 && (
+                      <div>
+                        <div class="container ">
+                          <div class="row d-inline-flex gap-4 me-2 p-2">
+                            <div class="col">
+                              <a href="# ">Sports Bike</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Scooter</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Cruiser</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Commuter</a>
+                            </div>
+                          </div>
+                          <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
+                            <div class="col">
+                              <a href="# ">Naked Sports</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Cafe Racer</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Off-Road</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Adventure</a>
+                            </div>
+                          </div>
+                          <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
+                            <div class="col">
+                              <a href="# ">Moped</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Tourer</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Mini bike</a>
+                            </div>
+                            <div class="col">
+                              <a href="# ">Other</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
+
+                <div className=""></div>
               </div>
             </div>
             <div className="col">
