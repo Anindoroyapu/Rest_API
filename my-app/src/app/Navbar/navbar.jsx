@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import dPhoto from "../../assets/desktop_version.jpg";
-import photo1 from "../../assets/111.jpg";
-import photo2 from "../../assets/222.jpg";
-import photo3 from "../../assets/333.jpg";
-import photo4 from "../../assets/444.jpg";
+//import photo1 from "../../assets/111.jpg";
+//import photo2 from "../../assets/222.jpg";
+//import photo3 from "../../assets/333.jpg";
+//import photo4 from "../../assets/444.jpg";
 import logo1 from "../../assets/hero.png";
 import logo2 from "../../assets/honda.png";
 import logo3 from "../../assets/suzuki.png";
@@ -18,6 +18,7 @@ function Navbar() {
     collapse2: false,
     collapse3: false,
   });
+  const images = ["111.jpg", "222.jpg", "333.jpg", "444.jpg"];
 
   const toggleCollapse = (collapseKey) => {
     setCollapsed((prevState) => ({
@@ -127,7 +128,7 @@ function Navbar() {
                   <div class="col border-primary">
                     <button
                       type="button"
-                      class="btn"
+                      class="btn browse-col"
                       onClick={() => toggleCollapse("collapse1")}
                     >
                       {collapsed.collapse1 ? "Brand" : "Brand"}
@@ -137,7 +138,7 @@ function Navbar() {
                       <div>
                         <div class="container ">
                           <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
-                            <div class="col">
+                            <div class="col ">
                               <a href="# ">
                                 <img
                                   src={logo1}
@@ -190,7 +191,7 @@ function Navbar() {
                   <div class="col border-primary">
                     <button
                       type="button"
-                      class="btn"
+                      class="btn browse-col"
                       onClick={() => toggleCollapse("collapse2")}
                     >
                       {collapsed.collapse2 ? "Budget" : "Budget"}
@@ -200,30 +201,30 @@ function Navbar() {
                       <div>
                         <div class="container ">
                           <div class="row d-inline-flex gap-4 me-2 p-2">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 60000</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 1Lakh</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 1.5Lakh</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 2Lakh</a>
                             </div>
                           </div>
                           <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 2.5Lakh</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 3Lakh</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 4Lakh</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Other</a>
                             </div>
                           </div>
@@ -234,7 +235,7 @@ function Navbar() {
                   <div class="col border-primary">
                     <button
                       type="button"
-                      class="btn"
+                      class="btn browse-col"
                       onClick={() => toggleCollapse("collapse3")}
                     >
                       {collapsed.collapse3 ? "Displacement" : "Displacement"}
@@ -243,30 +244,30 @@ function Navbar() {
                       <div>
                         <div class="container ">
                           <div class="row d-inline-flex gap-4 me-2 p-2">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 100cc</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 150cc</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 200cc</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 250cc</a>
                             </div>
                           </div>
                           <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 300cc</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 350cc</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Under 400cc</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Other</a>
                             </div>
                           </div>
@@ -277,7 +278,7 @@ function Navbar() {
                   <div class="col border-primary">
                     <button
                       type="button"
-                      class="btn"
+                      class="btn browse-col"
                       onClick={() => toggleCollapse("collapse4")}
                     >
                       {collapsed.collapse4 ? "Body Style" : "Body Style"}
@@ -286,44 +287,44 @@ function Navbar() {
                       <div>
                         <div class="container ">
                           <div class="row d-inline-flex gap-4 me-2 p-2">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Sports Bike</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Scooter</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Cruiser</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Commuter</a>
                             </div>
                           </div>
                           <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Naked Sports</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Cafe Racer</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Off-Road</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Adventure</a>
                             </div>
                           </div>
                           <div class="row d-inline-flex gap-4 me-2 p-4 border-bottom">
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Moped</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Tourer</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Mini bike</a>
                             </div>
-                            <div class="col">
+                            <div class="col btn-col">
                               <a href="# ">Other</a>
                             </div>
                           </div>
@@ -337,11 +338,10 @@ function Navbar() {
               </div>
             </div>
             <div className="col">
-              <div>
-                <img src={photo1} alt="" />
-                <img src={photo2} alt="" />
-                <img src={photo3} alt="" />
-                <img src={photo4} alt="" />
+              <div className="marquee-container">
+                {images.map((image, index) => (
+                  <img key={index} src={image} alt={`Slide ${index + 1}`} />
+                ))}
               </div>
             </div>
           </div>

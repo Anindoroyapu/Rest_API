@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/Home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
