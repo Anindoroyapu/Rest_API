@@ -7958,6 +7958,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-login-modal@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-login-modal/-/react-login-modal-1.2.1.tgz#97f15540f57a69b75e85d764188954dafb8b2bab"
+  integrity sha512-SZF6r5uklytFYGvvXnxF2dbGgbaP5OcAyIQKAhzLCkER6G8du/ROb35eEuopna8/ZgryfKauStDMOxmtv2jPSQ==
+
 react-marquee-slider@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-marquee-slider/-/react-marquee-slider-1.1.5.tgz#5dc34c259071e513eb7c4084c405823233b28bb9"

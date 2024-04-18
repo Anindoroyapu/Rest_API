@@ -1,3 +1,10 @@
+.desktopMenu {
+  width: 10rem;
+  position: fixed;
+}
+.fPhoto {
+  width: 15rem;
+}
 .navbar-header {
   height: 6rem;
   text-align: center;
