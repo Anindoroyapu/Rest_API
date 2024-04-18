@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./home.css";
 //import Navbar from "../Navbar/navbar";
-import logo1 from "../../../assets/hero.png";
-import logo2 from "../../../assets/honda.png";
-import logo3 from "../../../assets/suzuki.png";
-import logo4 from "../../../assets/tvs.png";
-import logo5 from "../../../assets/yamaha.png";
+import logo1 from "../../../assets/Brand/hero.png";
+import logo2 from "../../../assets/Brand/honda.png";
+import logo3 from "../../../assets/Brand/suzuki.png";
+import logo4 from "../../../assets/Brand/tvs.png";
+import logo5 from "../../../assets/Brand/yamaha.png";
+import logo6 from "../../../assets/Brand/speeder.png";
 import { Link } from "react-router-dom";
-import mlinks from "./mlink";
+import mlinks from "../../../data/budgetGroup";
 
 function Home() {
   const CTYPES = {
@@ -74,12 +75,10 @@ function Home() {
         </div>
         <div className="row border-bottom font-weight-bold">
           <div className="  col border-primary">
-            <div className="home-btn "></div>
-
             {categoryName === CTYPES.BRAND && (
               <div>
                 <div className="container ">
-                  <div className=" d-inline-flex gap-5 me-2 p-4 border-bottom">
+                  <div className="row d-inline-flex gap-5 me-2 p-4 border-bottom">
                     <div className="col ">
                       <a href="# ">
                         <img
@@ -120,6 +119,15 @@ function Home() {
                       <a href="# ">
                         <img
                           src={logo5}
+                          alt=""
+                          style={{ width: "100px", height: "100px" }}
+                        />
+                      </a>
+                    </div>
+                    <div className="col">
+                      <a href="# ">
+                        <img
+                          src={logo6}
                           alt=""
                           style={{ width: "100px", height: "100px" }}
                         />

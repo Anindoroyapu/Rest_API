@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import blinks from "./blink";
+import data from "../../../data/bikieBrandName";
 import "../BikePrice/bikePrice";
 
 function bikePrice() {
@@ -15,14 +15,13 @@ function bikePrice() {
         </div>
       </div>
       <div className="row m-2 ">
-        {blinks.map((item) => (
+        {data.map((item) => (
           <Link
             key={item.id}
             to={item.path}
-            className="col m-3 border border-secondary-subtle text-decoration-none"
+            className="col m-3 border border-secondary-subtle"
           >
             <img src={item.img_url} alt={item.title} />
-            {item?.title}
           </Link>
         ))}
       </div>

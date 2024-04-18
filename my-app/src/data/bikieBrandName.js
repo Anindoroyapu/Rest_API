@@ -1,26 +1,26 @@
-import logo1 from "../../../assets/yamahaa.png";
-import logo2 from "../../../assets/tvss.png";
-import logo3 from "../../../assets/aprilia.png";
-import logo4 from "../../../assets/bajaj.png";
-import logo5 from "../../../assets/benelli.png";
-import logo6 from "../../../assets/haojue.png";
-import logo7 from "../../../assets/heroo.png";
-import logo8 from "../../../assets/hondaa.png";
-import logo9 from "../../../assets/kawasaki.png";
-import logo10 from "../../../assets/keeway.png";
-import logo11 from "../../../assets/ktm.png";
-import logo12 from "../../../assets/lifan.png";
-import logo13 from "../../../assets/runner.png";
-import logo14 from "../../../assets/speeder.png";
-import logo15 from "../../../assets/suzukii.png";
-import logo16 from "../../../assets/taro.png";
-import logo17 from "../../../assets/vespa.png";
-import logo18 from "../../../assets/walton.webp";
-import logo19 from "../../../assets/zontes.webp";
-import logo20 from "../../../assets/php.png";
-import logo21 from "../../../assets/akij.png";
+import logo1 from "../assets/Brand/yamahaa.png";
+import logo2 from "../assets/Brand/tvss.png";
+import logo3 from "../assets/Brand/aprilia.png";
+import logo4 from "../assets/Brand/bajaj.png";
+import logo5 from "../assets/Brand/benelli.png";
+import logo6 from "../assets/Brand/haojue.png";
+import logo7 from "../assets/Brand/heroo.png";
+import logo8 from "../assets/Brand/hondaa.png";
+import logo9 from "../assets/Brand/kawasaki.png";
+import logo10 from "../assets/Brand/keeway.png";
+import logo11 from "../assets/Brand/ktm.png";
+import logo12 from "../assets/Brand/lifan.png";
+import logo13 from "../assets/Brand/runner.png";
+import logo14 from "../assets/Brand/speeder.png";
+import logo15 from "../assets/Brand/suzukii.png";
+import logo16 from "../assets/Brand/taro.png";
+import logo17 from "../assets/Brand/vespa.png";
+import logo18 from "../assets/Brand/walton.webp";
+import logo19 from "../assets/Brand/zontes.webp";
+import logo20 from "../assets/Brand/php.png";
+import logo21 from "../assets/Brand/akij.png";
 
-const links = [
+const bikieBrandName = [
   {
     id: 1,
     img_url: logo1,
@@ -127,4 +127,4 @@ const links = [
     title: "AKIJ",
   },
 ];
-export default links;
+export default bikieBrandName;
