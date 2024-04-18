@@ -1,33 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
-//import Marquee from "react-marquee-slider";
 import dPhoto from "../../assets/desktop_version.jpg";
-//import photo1 from "../../assets/111.jpg";
-//import photo2 from "../../assets/222.jpg";
-//import photo3 from "../../assets/333.jpg";
-//import photo4 from "../../assets/444.jpg";
+import { Link } from "react-router-dom";
+import links from "./link";
 
 function Navbar() {
-  // if (keyName === "brand") {
-  //   setCategoryName((cuData) => ({ ...cuData, [keyName]: !cuData?.brand }));
-  // }
-  // if (keyName === "budget") {
-  //   setCategoryName((cuData) => ({ ...cuData, [keyName]: !cuData?.budget }));
-  // }
-  // if (keyName === "displacement") {
-  //   setCategoryName((cuData) => ({
-  //     ...cuData,
-  //     [keyName]: !cuData?.displacement,
-  //   }));
-  // }
-  // if (keyName === "bodyStyle") {
-  //   setCategoryName((cuData) => ({
-  //     ...cuData,
-  //     [keyName]: !cuData?.bodyStyle,
-  //   }));
-  // }
-
   return (
     <nav className="header">
       <div className="navbar-header ">
@@ -58,68 +36,15 @@ function Navbar() {
           <div className="row">
             <div className="desktopMenu">
               <div className=" list-group">
-                <div className="dropdown">
-                  <a className="list-group-item" href="/Home">
-                    Home
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a
-                        className="btn dropdown-item dropdown-toggle"
-                        href="# "
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="# ">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="# ">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <a className="list-group-item" href="bikePrice">
-                  Bike Price
-                </a>
-                <a className="list-group-item" href="/home">
-                  Compare
-                </a>
-                <a className="list-group-item" href="/home">
-                  Accessories
-                </a>
-                <a className="list-group-item" href="/home">
-                  Showrooms
-                </a>
-                <a className="list-group-item" href="/home">
-                  Brands
-                </a>
-                <a className="list-group-item" href="/home">
-                  Scooter
-                </a>
-                <a className="list-group-item" href="/home">
-                  Electric
-                </a>
-                <a className="list-group-item" href="/home">
-                  Upcoming
-                </a>
-                <a className="list-group-item" href="/home">
-                  Review
-                </a>
-                <a className="list-group-item" href="/Home">
-                  Tips
-                </a>
-                <a className="list-group-item" href="/Home">
-                  Other
-                </a>
+                {links.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={item.path}
+                    className="list-group-item"
+                  >
+                    {item?.title}
+                  </Link>
+                ))}
               </div>
             </div>
 
