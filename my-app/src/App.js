@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./app/Navbar/navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./app/Home/Home";
+import Home from "./app/Pages/Home/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BikePrice from "./app/Pages/BikePrice/bikePrice";
 import Accessories from "./app/Pages/Accessories/accessories";
