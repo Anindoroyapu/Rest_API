@@ -42,8 +42,8 @@ const links = [
   },
   {
     id: 10,
-    path: "/upcoming",
-    title: "Upcoming",
+    path: "/upcomming",
+    title: "Upcomming",
   },
   {
     id: 11,

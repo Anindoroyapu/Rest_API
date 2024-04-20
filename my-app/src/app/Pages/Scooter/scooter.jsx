@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import showroomList from "../../../data/bikieBrandName";
-import "../BikePrice/bikePrice";
+import scooterList from "../../../data/scooterList";
 
-function showrooms() {
+function ScooterList() {
   return (
     <div
       className="bikePrice-header border w-75 d-inline-block"
@@ -11,11 +10,11 @@ function showrooms() {
     >
       <div>
         <div className="home-header border-bottom">
-          <h3>All Bike & Scooter Dealer Showroom</h3>
+          <h3>Best Bikes In Bangladesh</h3>
         </div>
       </div>
       <div className="row m-2 ">
-        {showroomList.map((item) => (
+        {scooterList.map((item) => (
           <Link
             key={item.id}
             to={item.path}
@@ -29,4 +28,4 @@ function showrooms() {
   );
 }
 
-export default showrooms;
+export default ScooterList;

@@ -8,6 +8,9 @@ import Accessories from "./app/Pages/Accessories/accessories";
 import TopBike from "./app/Pages/TopBike/topBike";
 import Showrooms from "./app/Pages/Showrooms/showrooms";
 import Brand from "./app/Pages/Brands/brands";
+import Scooter from "./app/Pages/Scooter/scooter";
+import Electric from "./app/Pages/Electric/elctric";
+import Upcomming from "./app/Pages/upcomming";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/topBike" element={<TopBike />} />
         <Route path="/showrooms" element={<Showrooms />} />
         <Route path="/brand" element={<Brand />} />
+        <Route path="/scooter" element={<Scooter />} />
+        <Route path="/electric" element={<Electric />} />
+        <Route path="/upcomming" element={<Upcomming />} />
       </Routes>
     </BrowserRouter>
   );

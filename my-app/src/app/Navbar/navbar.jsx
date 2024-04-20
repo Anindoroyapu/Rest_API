@@ -24,7 +24,7 @@ function Navbar() {
               <button className="btn btn-primary me-2" type="submit">
                 Search
               </button>
-              <button className="btn btn-outline-primary me-2" type=" ">
+              <button className="btn btn-outline-primary me-2" type="button">
                 Login
               </button>
 
