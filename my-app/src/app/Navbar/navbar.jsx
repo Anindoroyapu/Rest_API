@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import dPhoto from "../../assets/desktop_version.jpg";
 import { Link } from "react-router-dom";
 import links from "./link";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 function Navbar() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <nav className="header">
       <div className="navbar-header ">
@@ -24,9 +31,29 @@ function Navbar() {
               <button className="btn btn-primary me-2" type="submit">
                 Search
               </button>
-              <button className="btn btn-outline-primary me-2" type="button">
+              <button
+                className="btn btn-outline-primary me-2"
+                type="button"
+                onClick={handleShow}
+              >
                 Login
               </button>
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  Woohoo, you are reading this text in a modal!
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                  <Button variant="primary" onClick={handleClose}>
+                    Login
+                  </Button>
+                </Modal.Footer>
+              </Modal>
 
               <button className="btn btn-outline-primary me-2" type=" ">
                 SignUp
