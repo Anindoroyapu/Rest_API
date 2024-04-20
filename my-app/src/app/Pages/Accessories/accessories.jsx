@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import alinks from "../../../data/helmetList";
+import helmetList from "../../../data/helmetList";
+import enginoilList from "../../../data/enginoilList";
+import tyreList from "../../../data/tyreList";
+import batteryList from "../../../data/betteryList";
+import clothingList from "../../../data/clothingList";
 
 function Accessories() {
   const ATYPES = {
@@ -79,7 +83,7 @@ function Accessories() {
       <div>
         {categoryName === ATYPES.HELMET && (
           <div className="row m-2">
-            {alinks.map((item) => (
+            {helmetList.map((item) => (
               <Link
                 key={item.id}
                 to={item.path}
@@ -98,7 +102,64 @@ function Accessories() {
       <div>
         {categoryName === ATYPES.ENGINEOIL && (
           <div className="row m-2">
-            {alinks.map((item) => (
+            {enginoilList.map((item) => (
+              <Link
+                key={item.id}
+                to={item.path}
+                className="col m-3 border border-secondary-subtle text-decoration-none "
+              >
+                <img
+                  src={item.img_url}
+                  alt={item.title}
+                  style={{ width: "200px", height: "200px" }}
+                />
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        {categoryName === ATYPES.TYRE && (
+          <div className="row m-2">
+            {tyreList.map((item) => (
+              <Link
+                key={item.id}
+                to={item.path}
+                className="col m-3 border border-secondary-subtle text-decoration-none "
+              >
+                <img
+                  src={item.img_url}
+                  alt={item.title}
+                  style={{ width: "200px", height: "200px" }}
+                />
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        {categoryName === ATYPES.BATTERY && (
+          <div className="row m-2">
+            {batteryList.map((item) => (
+              <Link
+                key={item.id}
+                to={item.path}
+                className="col m-3 border border-secondary-subtle text-decoration-none "
+              >
+                <img
+                  src={item.img_url}
+                  alt={item.title}
+                  style={{ width: "200px", height: "200px" }}
+                />
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        {categoryName === ATYPES.CLOTHING && (
+          <div className="row m-2">
+            {clothingList.map((item) => (
               <Link
                 key={item.id}
                 to={item.path}
