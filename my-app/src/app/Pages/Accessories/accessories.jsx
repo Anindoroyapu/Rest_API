@@ -95,6 +95,25 @@ function Accessories() {
           </div>
         )}
       </div>
+      <div>
+        {categoryName === ATYPES.ENGINEOIL && (
+          <div className="row m-2">
+            {alinks.map((item) => (
+              <Link
+                key={item.id}
+                to={item.path}
+                className="col m-3 border border-secondary-subtle text-decoration-none "
+              >
+                <img
+                  src={item.img_url}
+                  alt={item.title}
+                  style={{ width: "200px", height: "200px" }}
+                />
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import logo8 from "../assets/helmet/origine.webp";
 import logo9 from "../assets/helmet/suomy.webp";
 import logo10 from "../assets/helmet/torq.webp";
 import logo11 from "../assets/helmet/yamaha.webp";
+import logo12 from "../assets/helmet/shaft.webp";
 
 const alinks = [
   {
@@ -65,6 +66,11 @@ const alinks = [
     id: 11,
     img_url: logo11,
     title: "KTM",
+  },
+  {
+    id: 12,
+    img_url: logo12,
+    title: "sheft",
   },
 ];
 export default alinks;
