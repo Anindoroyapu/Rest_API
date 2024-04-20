@@ -23,7 +23,7 @@ const links = [
   {
     id: 6,
     path: "/showrooms",
-    title: "showrooms",
+    title: "Showrooms",
   },
   {
     id: 7,
