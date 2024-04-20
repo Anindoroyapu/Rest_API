@@ -14,14 +14,10 @@ const links = [
     path: "/accessories",
     title: "Accessories",
   },
-  {
-    id: 4,
-    path: "/compare",
-    title: "Compare",
-  },
+
   {
     id: 5,
-    path: "/top-bike",
+    path: "/topBike",
     title: "Top Bike",
   },
   {

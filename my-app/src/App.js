@@ -5,6 +5,7 @@ import Home from "./app/Pages/Home/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BikePrice from "./app/Pages/BikePrice/bikePrice";
 import Accessories from "./app/Pages/Accessories/accessories";
+import TopBike from "./app/Pages/TopBike/topBike";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/bike-price" element={<BikePrice />} />
         <Route path="/accessories" element={<Accessories />} />
+        <Route path="/topBike" element={<TopBike />} />
       </Routes>
     </BrowserRouter>
   );
