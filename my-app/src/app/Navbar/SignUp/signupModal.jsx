@@ -16,16 +16,16 @@ function SignupModal() {
               <input type="password" name="rPassword" placeholder="password" />
             </div>
             <center>
-              <div class="form-button">
+              <div className="form-button">
                 <Link>Submit</Link>
               </div>
             </center>
-            <div class="form-body">
+            <div className="form-body">
               By clicking the Sing Up button, you agree to our{" "}
               <Link>Terms and Condition</Link>
               <Link>and policy Privacy.</Link>
             </div>
-            <div class="form-subcontent">
+            <div className="form-subcontent">
               Already have an account?
               <Link>Login</Link>
             </div>

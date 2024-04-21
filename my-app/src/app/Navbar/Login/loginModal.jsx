@@ -7,7 +7,7 @@ function LoginModal() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //const handleShow = () => setShow(true);
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>

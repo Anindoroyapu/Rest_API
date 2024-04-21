@@ -8,11 +8,15 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./Login/loginModal";
+
 function Navbar() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const signuhandleClose = () => setShow(false);
+  const signuhandleShow = () => setShow(true);
+  const signuphandleShow = () => setShow(true);
   return (
     <nav className="header">
       <div className="navbar-header ">
@@ -39,50 +43,99 @@ function Navbar() {
               >
                 Login
               </button>
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>
-                    <div className="login-header">
-                      <div className="">WELCOME</div>
-                    </div>
-                  </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <Form>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput1"
-                    >
-                      <Form.Label>Email address</Form.Label>
-                      <Form.Control
-                        type="email"
-                        placeholder="name@example.com"
-                        autoFocus
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control
-                        type="password"
-                        placeholder="m#P52s@ap$V"
-                        autoFocus
-                      />
-                    </Form.Group>
-                  </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                  <Button variant="primary" onClick={handleClose}>
-                    Login
-                  </Button>
-                </Modal.Footer>
-              </Modal>
+              <div className=" justify-content-center">
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>
+                      <div className="login-header justify-content-center text-align-center">
+                        <div className=" ">WELCOME</div>
+                      </div>
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlInput1"
+                      >
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                          type="email"
+                          placeholder="name@example.com"
+                          autoFocus
+                        />
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          placeholder="m#P52s@ap$V"
+                          autoFocus
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                      Login
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+              </div>
 
-              <button className="btn btn-outline-primary me-2" type=" ">
-                <Link to="./SignUp/signupModal.jsxS">SignUp</Link>
+              <button
+                className="btn btn-outline-primary me-2"
+                type="button"
+                variant="primary"
+                onClick={signuphandleShow}
+              >
+                SignUp
               </button>
+              <div className=" justify-content-center">
+                <Modal show={show} onHide={signuhandleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>
+                      <div className="login-header justify-content-center">
+                        <div className=" ">WELCOME</div>
+                      </div>
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="exampleForm.ControlInput1"
+                      >
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                          type="email"
+                          placeholder="name@example.com"
+                          autoFocus
+                        />
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          placeholder="m#P52s@ap$V"
+                          autoFocus
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                      Login
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+              </div>
             </form>
           </div>
           <div className="row">
