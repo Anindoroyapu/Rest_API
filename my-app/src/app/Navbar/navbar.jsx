@@ -5,14 +5,14 @@ import dPhoto from "../../assets/desktop_version.jpg";
 import { Link } from "react-router-dom";
 import links from "./link";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-
+import "./Login/loginModal";
 function Navbar() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   return (
     <nav className="header">
       <div className="navbar-header ">
@@ -34,16 +34,41 @@ function Navbar() {
               <button
                 className="btn btn-outline-primary me-2"
                 type="button"
+                variant="primary"
                 onClick={handleShow}
               >
                 Login
               </button>
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Modal heading</Modal.Title>
+                  <Modal.Title>
+                    <div className="login-header">
+                      <div className="">WELCOME</div>
+                    </div>
+                  </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  Woohoo, you are reading this text in a modal!
+                  <Form>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="name@example.com"
+                        autoFocus
+                      />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        placeholder="m#P52s@ap$V"
+                        autoFocus
+                      />
+                    </Form.Group>
+                  </Form>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>
@@ -56,7 +81,7 @@ function Navbar() {
               </Modal>
 
               <button className="btn btn-outline-primary me-2" type=" ">
-                SignUp
+                <Link to="./SignUp/signupModal.jsxS">SignUp</Link>
               </button>
             </form>
           </div>
