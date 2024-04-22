@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { getApiUrl } from "../../../utils/url";
 
 function SignupModal() {
   const [fName, setFName] = useState();
   const [lName, setLName] = useState();
-  const [rphone, setRphone] = useState();
-  const [rEmail, setEmail] = useState();
-  const [rpassword, setRpassword] = useState();
+  const [phone, setRphone] = useState();
+  const [email, setEmail] = useState();
+  const [password, setRpassword] = useState();
 
   const handleSubmit = () => {
     axios
-      .post("https://localhost:7201", {
+      .post(`${getApiUrl()}/api/brand`, {
         firstName: fName,
         lastName: lName,
-        phone: rphone,
-        email: rEmail,
-        password: rpassword,
+        phone: phone,
+        email: email,
+        password: password,
       })
       .then(function (response) {
         console.log(response);
@@ -37,72 +38,78 @@ function SignupModal() {
             <div className="form-title home-header border-bottom">
               <h3>Signup</h3>
             </div>
-            <div className="form-content home-header">
-              <div className="form-input row m-5 gap-3 fs-5 ">
-                <input
-                  type="text"
-                  name="fName"
-                  placeholder="First Name"
-                  className=" sign-header "
-                  value={fName}
-                  onChange={(fin) => setFName(fin)}
-                />
-                <input
-                  type="text"
-                  name="lName"
-                  placeholder="Last Name"
-                  className=" sign-header"
-                  value={lName}
-                  onChange={(fin) => setLName(fin)}
-                />
-                <input
-                  type="email"
-                  name="rEmail"
-                  placeholder="Email"
-                  className=" sign-header"
-                  value={rphone}
-                  onChange={(fin) => setRphone(fin)}
-                />
-                <input
-                  type="text"
-                  name="rPhone"
-                  placeholder="Phone"
-                  className=" sign-header"
-                  value={rEmail}
-                  onChange={(fin) => setEmail(fin)}
-                />
-                <input
-                  type="password"
-                  name="rPassword"
-                  placeholder="Password"
-                  className=" sign-header"
-                  value={rpassword}
-                  onChange={(fin) => setRpassword(fin)}
-                />
-              </div>
-              <center>
-                <div className="form-button">
-                  <Link
-                    className="text-decoration-none btn btn-outline-primary me-2"
-                    onClick={handleSubmit}
-                  >
-                    Submit
-                  </Link>
+            <div className="row">
+              <div className="col"></div>
+              <div className="col-6 border">
+                <div className="form-content home-header">
+                  <div className="form-input row m-5 gap-3 fs-5 ">
+                    <input
+                      type="text"
+                      name="fName"
+                      placeholder="First Name"
+                      className=" sign-header "
+                      value={fName}
+                      onChange={(ev) => setFName(ev.target.value)}
+                    />
+                    <input
+                      type="text"
+                      name="lName"
+                      placeholder="Last Name"
+                      className=" sign-header"
+                      value={lName}
+                      onChange={(ev) => setLName(ev.target.value)}
+                    />
+                    <input
+                      type="email"
+                      name="rEmail"
+                      placeholder="Email"
+                      className=" sign-header"
+                      value={email}
+                      onChange={(ev) => setEmail(ev.target.value)}
+                    />
+                    <input
+                      type="text"
+                      name="rPhone"
+                      placeholder="Phone"
+                      className=" sign-header"
+                      value={phone}
+                      onChange={(ev) => setRphone(ev.target.value)}
+                    />
+                    <input
+                      type="password"
+                      name="rPassword"
+                      placeholder="Password"
+                      className=" sign-header"
+                      value={password}
+                      onChange={(ev) => setRpassword(ev.target.value)}
+                    />
+                  </div>
+                  <center>
+                    <div className="form-button">
+                      <Link
+                        className="text-decoration-none btn btn-outline-primary me-2"
+                        onClick={handleSubmit}
+                      >
+                        Submit
+                      </Link>
+                    </div>
+                  </center>
+                  <div className="form-body">
+                    By clicking the Sing Up button, you agree to our
+                    <Link className="text-decoration-none">
+                      Terms and Condition
+                    </Link>
+                    <Link className="text-decoration-none">
+                      and policy Privacy.
+                    </Link>
+                  </div>
+                  <div className="form-subcontent">
+                    Already have an account?
+                    <Link className="text-decoration-none">Login</Link>
+                  </div>
                 </div>
-              </center>
-              <div className="form-body">
-                By clicking the Sing Up button, you agree to our
-                <Link className="text-decoration-none">
-                  Terms and Condition
-                </Link>
-                <Link className="text-decoration-none">
-                  and policy Privacy.
-                </Link>
               </div>
-              <div className="form-subcontent">
-                Already have an account?
-                <Link className="text-decoration-none">Login</Link>
-              </div>
+              <div className="col"></div>
             </div>
           </div>
         </div>

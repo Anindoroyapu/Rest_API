@@ -30,9 +30,9 @@ function Accessories() {
         <h3>Available All Motorcycle Accessories</h3>
       </div>
       <div>
-        <div class="container text-center">
-          <div class="row align-items-start">
-            <div class="col">
+        <div className="container text-center">
+          <div className="row align-items-start">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col "
@@ -41,7 +41,7 @@ function Accessories() {
                 HELMET
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col"
@@ -50,7 +50,7 @@ function Accessories() {
                 ENGINEOIL
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col "
@@ -59,7 +59,7 @@ function Accessories() {
                 TYRE
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col"
@@ -68,7 +68,7 @@ function Accessories() {
                 BATTERY
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col"
