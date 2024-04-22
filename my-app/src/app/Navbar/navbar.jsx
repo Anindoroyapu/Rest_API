@@ -8,12 +8,36 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./Login/loginModal";
+import axios from "axios";
+import { getApiUrl } from "../../utils/url";
 
 function Navbar() {
   const [show, setShow] = useState(false);
-  const loginhandleClose = () => setShow(false);
-  const loginhandleShow = () => setShow(true);
 
+  const handleLoginClose = () => {
+    setShow(false);
+  };
+  const loginhandleShow = () => {
+    setShow(true);
+  };
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+    axios
+      .post(`${getApiUrl()}/api/auth/login`, {
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <nav className="header">
       <div className="navbar-header ">
@@ -40,17 +64,18 @@ function Navbar() {
               >
                 Login
               </button>
+
               <div className=" justify-content-center">
-                <Modal show={show} onHide={loginhandleClose}>
-                  <Modal.Header closeButton>
-                    <Modal.Title>
-                      <div className="login-header justify-content-center text-align-center">
-                        <div className=" ">WELCOME</div>
-                      </div>
-                    </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Form>
+                <Modal show={show} onHide={handleLoginClose}>
+                  <Form onSubmit={handleSubmit}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>
+                        <div className="login-header justify-content-center text-align-center">
+                          <div className=" ">WELCOME</div>
+                        </div>
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
                       <Form.Group
                         className="mb-3"
                         controlId="exampleForm.ControlInput1"
@@ -60,6 +85,8 @@ function Navbar() {
                           type="email"
                           placeholder="name@example.com"
                           autoFocus
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="">
@@ -68,18 +95,20 @@ function Navbar() {
                           type="password"
                           placeholder="m#P52s@ap$V"
                           autoFocus
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                       </Form.Group>
-                    </Form>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button variant="secondary" onClick={loginhandleClose}>
-                      Close
-                    </Button>
-                    <Button variant="primary" onClick={loginhandleClose}>
-                      Login
-                    </Button>
-                  </Modal.Footer>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={handleLoginClose}>
+                        Close
+                      </Button>
+                      <Button variant="primary" type="submit">
+                        Login
+                      </Button>
+                    </Modal.Footer>
+                  </Form>
                 </Modal>
               </div>
 

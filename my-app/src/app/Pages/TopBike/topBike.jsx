@@ -18,9 +18,10 @@ function topBike() {
           <Link
             key={item.id}
             to={item.path}
-            className="col m-3 border border-secondary-subtle"
+            className="col m-3 border border-secondary-subtle text-decoration-none"
           >
             <img src={item.img_url} alt={item.title} />
+            <div className="home-header fs-5 pt-3 ">{item?.title}</div>
           </Link>
         ))}
       </div>

@@ -9,32 +9,32 @@ const topBikeList = [
   {
     id: 1,
     img_url: yamahaFzs,
-    title: "yamahaFzs",
+    title: "Yamaha FZS",
   },
   {
     id: 2,
     img_url: suzukiGixxer,
-    title: "suzukiGixxer",
+    title: "Suzuki Gixxer",
   },
   {
     id: 3,
     img_url: lifanKpr,
-    title: "lifanKpr",
+    title: "Lifan KPR",
   },
   {
     id: 4,
     img_url: hondaXBlade,
-    title: "hondaXBlade",
+    title: "Honda XBlade",
   },
   {
     id: 5,
     img_url: tvsApache,
-    title: "tvsApache",
+    title: "TVS Apache",
   },
   {
     id: 6,
     img_url: yamahaR15,
-    title: "yamahaR15",
+    title: "Yamaha R15",
   },
 ];
 export default topBikeList;

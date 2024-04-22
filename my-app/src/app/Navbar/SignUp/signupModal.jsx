@@ -94,7 +94,7 @@ function SignupModal() {
                       </Link>
                     </div>
                   </center>
-                  <div className="form-body">
+                  <div className="form-body pt-3">
                     By clicking the Sing Up button, you agree to our
                     <Link className="text-decoration-none">
                       Terms and Condition
