@@ -33,9 +33,9 @@ function Home() {
         <div className="home-header border-bottom">
           <h1>Browse Bikes By</h1>
         </div>
-        <div class="container text-center">
-          <div class="row align-items-start">
-            <div class="col">
+        <div className="container text-center">
+          <div className="row align-items-start">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col "
@@ -44,7 +44,7 @@ function Home() {
                 Brand
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col"
@@ -53,7 +53,7 @@ function Home() {
                 Budget
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col "
@@ -62,7 +62,7 @@ function Home() {
                 Displacement
               </button>
             </div>
-            <div class="col">
+            <div className="col">
               <button
                 type="button"
                 className=" btn browse-col"

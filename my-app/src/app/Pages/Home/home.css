@@ -13,3 +13,9 @@
   justify-content: center;
   align-items: center;
 }
+.sign-header {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}

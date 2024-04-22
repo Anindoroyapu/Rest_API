@@ -11,8 +11,8 @@ import Brand from "./app/Pages/Brands/brands";
 import Scooter from "./app/Pages/Scooter/scooter";
 import Electric from "./app/Pages/Electric/elctric";
 import Upcomming from "./app/Pages/upcomming";
-import LoginModalPage from "./app/Navbar/Login/loginModal";
-//import SignupModal from "./app/Navbar/SignUp/SignupModal";
+//import LoginModalPage from "./app/Navbar/Login/loginModal";
+import SignupModal from "./app/Navbar/SignUp/signupModal";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         <Route path="/scooter" element={<Scooter />} />
         <Route path="/electric" element={<Electric />} />
         <Route path="/upcomming" element={<Upcomming />} />
-        <Route path="/loginModal" element={<LoginModalPage />} />
+        <Route path="/signupModal" element={<SignupModal />} />
       </Routes>
     </BrowserRouter>
   );
