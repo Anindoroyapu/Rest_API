@@ -13,8 +13,8 @@ function SignupModal() {
   const handleSubmit = () => {
     axios
       .post(`${getApiUrl()}/api/brand`, {
-        firstName: fName,
-        lastName: lName,
+        fName: fName,
+        lName: lName,
         phone: phone,
         email: email,
         password: password,
@@ -47,7 +47,7 @@ function SignupModal() {
                       type="text"
                       name="fName"
                       placeholder="First Name"
-                      className=" sign-header "
+                      className=" sign-header border-bottom"
                       value={fName}
                       onChange={(ev) => setFName(ev.target.value)}
                     />
@@ -55,7 +55,7 @@ function SignupModal() {
                       type="text"
                       name="lName"
                       placeholder="Last Name"
-                      className=" sign-header"
+                      className=" sign-header border-bottom"
                       value={lName}
                       onChange={(ev) => setLName(ev.target.value)}
                     />
@@ -63,7 +63,7 @@ function SignupModal() {
                       type="email"
                       name="rEmail"
                       placeholder="Email"
-                      className=" sign-header"
+                      className=" sign-header border-bottom"
                       value={email}
                       onChange={(ev) => setEmail(ev.target.value)}
                     />
@@ -71,7 +71,7 @@ function SignupModal() {
                       type="text"
                       name="rPhone"
                       placeholder="Phone"
-                      className=" sign-header"
+                      className=" sign-header border-bottom"
                       value={phone}
                       onChange={(ev) => setRphone(ev.target.value)}
                     />
@@ -79,7 +79,7 @@ function SignupModal() {
                       type="password"
                       name="rPassword"
                       placeholder="Password"
-                      className=" sign-header"
+                      className=" sign-header border-bottom"
                       value={password}
                       onChange={(ev) => setRpassword(ev.target.value)}
                     />
