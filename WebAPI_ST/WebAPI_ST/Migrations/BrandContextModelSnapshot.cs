@@ -9,7 +9,7 @@ using WebAPI_ST.Data;
 
 namespace WebAPI_ST.Migrations
 {
-    [DbContext(typeof(BrandContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class BrandContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

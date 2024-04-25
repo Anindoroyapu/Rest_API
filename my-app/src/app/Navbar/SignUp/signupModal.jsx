@@ -12,12 +12,12 @@ function SignupModal() {
 
   const handleSubmit = () => {
     axios
-      .post(`${getApiUrl()}/api/brand`, {
-        fName: fName,
-        lName: lName,
-        phone: phone,
-        email: email,
-        password: password,
+      .post(`${getApiUrl()}/api/auth/create-account`, {
+        FirstName: fName,
+        LastName: lName,
+        PrimaryPhone: phone,
+        PrimaryEmail: email,
+        Password: password,
       })
       .then(function (response) {
         console.log(response);

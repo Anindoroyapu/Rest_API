@@ -1,15 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using WebAPI_ST.Data;
-using WebAPI_ST.Models;
-using WebAPI_ST.Controllers;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<BrandContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("BrandCS")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.EnableSensitiveDataLogging(true);
+});
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

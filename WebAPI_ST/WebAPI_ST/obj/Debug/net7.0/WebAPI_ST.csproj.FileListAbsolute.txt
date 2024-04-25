@@ -151,3 +151,6 @@ E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\obj\Debug\net7.0\refint\WebAPI_ST.dll
 E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\obj\Debug\net7.0\WebAPI_ST.pdb
 E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\obj\Debug\net7.0\WebAPI_ST.genruntimeconfig.cache
 E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\obj\Debug\net7.0\ref\WebAPI_ST.dll
+E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\bin\Debug\net7.0\BCrypt.Net.dll
+E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\bin\Debug\net7.0\Npgsql.dll
+E:\Project\Rest_API\WebAPI_ST\WebAPI_ST\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
