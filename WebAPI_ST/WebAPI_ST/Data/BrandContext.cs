@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebAPI_ST.Models;
-
+using WebAPI_ST.Models.UserProfile;
 namespace WebAPI_ST.Data
 {
     public class BrandContext    : DbContext

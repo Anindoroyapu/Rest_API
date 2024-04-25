@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using WebAPI_ST.Utils;
 namespace WebAPI_ST.Models.AgencyProfile
 {
     [Table("AgencyProfile", Schema = "public")]
