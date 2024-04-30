@@ -1,4 +1,5 @@
-﻿using MiracleWebAPI.Utils;
+﻿using WebAPI_ST.Utils;
+
 
 namespace WebAPI_ST.Models.Auth
 {
@@ -8,7 +9,7 @@ namespace WebAPI_ST.Models.Auth
         {
             var st = Validation.ValidateAll(new List<StatusObj>
             {
-                Validation.IsValidEmailFormat(authLogin.Username, "Username/Email Address"),
+                Validation.IsValidEmailFormat(authLogin.Username,"Username/Email Address"),
                 Validation.IsValidGeneralLongString(authLogin.Password, "Password", 1),
             });
 
@@ -103,5 +104,17 @@ namespace WebAPI_ST.Models.Auth
 
             return new ApiResponse { Status = st.Status, Title = st.Title, ReferenceName = referanceName };
         }
+
+
+        public class AuthLogin
+        {
+            public string? Username { get; internal set; }
+            public string? Password { get; internal set; }
+        }
+
+
     }
+
 }
+
+

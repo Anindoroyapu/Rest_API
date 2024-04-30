@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using MiracleWebAPI.Utils;
 using System.Security.Cryptography;
 using WebAPI_ST.Models.UserProfile;
+using WebAPI_ST.Utils;
 
 namespace WebAPI_ST.Controllers
 {
@@ -49,7 +50,7 @@ namespace WebAPI_ST.Controllers
                 return Ok(ApiResponseHandler.Error("Password Doesn't Match"));
             }
 
-            var tokenStr = await AuthOperation.SavingToken(_context, Request, _config, userInfo);
+            var tokenStr = await AuthOperation(_context, Request, _config, userInfo);
             if (tokenStr == "")
             {
                 return Ok(ApiResponseHandler.Error("Token Not Generated"));
@@ -60,6 +61,11 @@ namespace WebAPI_ST.Controllers
             {
                 Token = tokenStr,
             }));
+        }
+
+        private Task<string> AuthOperation(ApplicationDbContext context, HttpRequest request, IConfiguration config, object userInfo)
+        {
+            throw new NotImplementedException();
         }
 
 

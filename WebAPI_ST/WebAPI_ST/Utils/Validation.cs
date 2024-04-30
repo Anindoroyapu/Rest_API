@@ -4,7 +4,7 @@ using WebAPI_ST.Utils;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-namespace MiracleWebAPI.Utils
+namespace WebAPI_ST.Utils
 {
     public class Validation
     {
@@ -407,10 +407,7 @@ namespace MiracleWebAPI.Utils
             return new StatusObj { Status = 0, Title = "Success" };
         }
 
-        internal static object ValidateAll(List<StatusObj> statusObjs)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 
     public class StatusObj
