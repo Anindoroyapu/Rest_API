@@ -10,9 +10,9 @@ namespace WebAPI_ST.Controllers
     [ApiController]
     public class BrandController : ControllerBase
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly BrandContext _dbContext;
 
-        public BrandController (ApplicationDbContext dbContext)
+        public BrandController (BrandContext dbContext)
         {
             _dbContext = dbContext;
         }

@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WebAPI_ST.Models
+﻿namespace WebAPI_ST.Models
 {
     public class Brand
     {
         public int ID { get; set; }
-        
         public string fName { get; set; } = "";
         public string lName { get; set; } = "";
         public string email { get; set; } = "";

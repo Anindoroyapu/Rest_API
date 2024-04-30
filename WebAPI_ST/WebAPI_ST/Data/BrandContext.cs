@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebAPI_ST.Models;
 using WebAPI_ST.Models.UserProfile;
-
 namespace WebAPI_ST.Data
 {
-    public class ApplicationDbContext    : DbContext
+    public class BrandContext    : DbContext
     {
         public DbSet<Brand> Brands { get; set; }
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public BrandContext(DbContextOptions<BrandContext> options) : base(options)
         {
             //--
         }

@@ -10,7 +10,7 @@ using WebAPI_ST.Data;
 
 namespace WebAPI_ST.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(BrandContext))]
     [Migration("20240421092156_Initial")]
     partial class Initial
     {

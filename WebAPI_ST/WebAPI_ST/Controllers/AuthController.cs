@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI_ST.Data;
 using WebAPI_ST.Models.Auth;
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore;
 using MiracleWebAPI.Utils;
 using System.Security.Cryptography;
 using WebAPI_ST.Models.UserProfile;
 using WebAPI_ST.Utils;
+=======
+>>>>>>> parent of f1f7ba4 (signUp_login_token_API_done)
 
 namespace WebAPI_ST.Controllers
 {
@@ -13,19 +16,16 @@ namespace WebAPI_ST.Controllers
     [ApiController]
     public class AuthController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IConfiguration _config;
-
-        public AuthController(ApplicationDbContext context, IConfiguration config) { 
-
+        private readonly BrandContext _context;
+        public AuthController(BrandContext context)
+        {
             _context = context;
-            _config = config;
         }
-
 
         [HttpPost("login")]
         public async Task<ActionResult<IEnumerable<Auth>>> AuthLogin(AuthLogin authLogin)
         {
+<<<<<<< HEAD
 
             //Validation
             var validate = AuthValidate.ValidateLoginPost(authLogin);
@@ -112,6 +112,9 @@ namespace WebAPI_ST.Controllers
             await _context.SaveChangesAsync();
 
             return Ok(ApiResponseHandler.Success("Account Created Successfully"));
+=======
+            var userInfo = await _context.UserProfile.FirstOrDefaultAsync(u => (u.UserName == authLogin.Username || u.PrimaryEmail == authLogin.Username) && u.Status == "active" && u.TimeDeleted == 0);
+>>>>>>> parent of f1f7ba4 (signUp_login_token_API_done)
         }
     }
 }

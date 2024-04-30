@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAPI_ST")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d05edaf517179ad197d44cd55c57cb199d082b45")]
+>>>>>>> parent of f1f7ba4 (signUp_login_token_API_done)
 [assembly: System.Reflection.AssemblyProductAttribute("WebAPI_ST")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAPI_ST")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
