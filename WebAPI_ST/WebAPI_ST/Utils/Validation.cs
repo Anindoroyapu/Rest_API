@@ -1,5 +1,6 @@
 ﻿// Ignore Spelling: Utils
 
+using WebAPI_ST.Utils;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -405,5 +406,17 @@ namespace MiracleWebAPI.Utils
 
             return new StatusObj { Status = 0, Title = "Success" };
         }
+
+        internal static object ValidateAll(List<StatusObj> statusObjs)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class StatusObj
+    {
+        public int Status { get; internal set; }
+        public string? Title { get; internal set; }
+        public int ErrorIndex { get; internal set; }
     }
 }

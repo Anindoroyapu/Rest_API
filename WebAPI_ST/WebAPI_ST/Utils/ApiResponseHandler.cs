@@ -1,6 +1,6 @@
 ﻿// Ignore Spelling: Utils
 
-namespace MiracleWebAPI.Utils
+namespace WebAPI_ST.Utils
 {
     public class ApiResponseHandler
     {
